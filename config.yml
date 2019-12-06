@@ -62,7 +62,7 @@ menu:
       weight: 5
 
 params:
-  since: 2017
+  since: 2019
   dateFormatToUse: "2006-01-02"
   enablePostCopyright: true
   # the directory under content folder that you want to render
@@ -87,7 +87,7 @@ params:
     avatar: avatar.png
     gravatar: hymanzxc@umich.edu
     author: xzhan
-    author_title: python developer
+    author_title: pythonista
     author_description: Good Good Study, Day Day Up~
     location: Ann Arbor, MI
     follow: https://github.com/HymanZHAN
@@ -115,8 +115,8 @@ params:
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
   share:
     enable: true # 是否启用分享
-    sites: weibo,qq,wechat,facebook,twitter # PC端显示的分享图标
-    mobile_sites: weibo,qq,qzone # 移动端显示的分享图标
+    sites: wechat,facebook,twitter # PC端显示的分享图标
+    mobile_sites: # 移动端显示的分享图标
 
   # Comment
   comment:

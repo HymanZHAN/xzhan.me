@@ -3,21 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://xzhan.me/2019/12/my-first-post/</loc>
-    <lastmod>2019-12-02T09:53:23-05:00</lastmod>
+    <loc>https://xzhan.me/2019/12/my-second-post/</loc>
+    <lastmod>2019-12-06T09:20:34-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://xzhan.me/posts/</loc>
-    <lastmod>2019-12-02T09:53:23-05:00</lastmod>
+    <lastmod>2019-12-06T09:20:34-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://xzhan.me/</loc>
+    <lastmod>2019-12-06T09:20:34-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://xzhan.me/2019/12/my-first-post/</loc>
     <lastmod>2019-12-02T09:53:23-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
