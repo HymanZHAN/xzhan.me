@@ -125,7 +125,7 @@ params:
     gitalk: # gitalk. https://gitalk.github.io/
       owner: HymanZHAN #必须. GitHub repository 所有者，可以是个人或者组织。
       admin: HymanZHAN #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
-      repo: https://github.com/HymanZHAN/xzhan.me #必须. GitHub repository.
+      repo: xzhan.me #必须. GitHub repository.
       ClientID: efe037dfabe722b4325d #必须. GitHub Application Client ID.
       ClientSecret: f38e82b48050ba5d4ab6d9ca41d36ce1e478d731 #必须. GitHub Application Client Secret.
     valine: # Valine. https://valine.js.org
