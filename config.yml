@@ -120,14 +120,14 @@ params:
 
   # Comment
   comment:
-    type: disqus # type disqus/gitalk/valine 启用哪种评论系统
-    disqus: xzhan # enter disqus shortname here
+    type: gitalk # type disqus/gitalk/valine 启用哪种评论系统
+    disqus: # enter disqus shortname here
     gitalk: # gitalk. https://gitalk.github.io/
-      owner: #必须. GitHub repository 所有者，可以是个人或者组织。
-      admin: #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
-      repo: #必须. GitHub repository.
-      ClientID: #必须. GitHub Application Client ID.
-      ClientSecret: #必须. GitHub Application Client Secret.
+      owner: HymanZHAN #必须. GitHub repository 所有者，可以是个人或者组织。
+      admin: HymanZHAN #必须. GitHub repository 的所有者和合作者 (对这个 repository 有写权限的用户)。
+      repo: https://github.com/HymanZHAN/xzhan.me #必须. GitHub repository.
+      ClientID: efe037dfabe722b4325d #必须. GitHub Application Client ID.
+      ClientSecret: f38e82b48050ba5d4ab6d9ca41d36ce1e478d731 #必须. GitHub Application Client Secret.
     valine: # Valine. https://valine.js.org
       appid: # your leancloud application appid
       appkey: # your leancloud application appkey
