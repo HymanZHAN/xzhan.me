@@ -85,10 +85,10 @@ params:
   profile:
     enabled: true # Whether to show profile bar
     avatar: avatar.png
-    gravatar: hymanzxc@umich.edu
+    # gravatar: hymanzxc@umich.edu
     author: xzhan
-    author_title: pythonista
-    author_description: Good Good Study, Day Day Up~
+    author_title: pythonista, learning gopher and rustacean
+    author_description: Good Good Study, Day Day Up
     location: Ann Arbor, MI
     follow: https://github.com/HymanZHAN
     # Social Links
@@ -96,10 +96,10 @@ params:
       links:
         github: https://github.com/HymanZHAN
         # weibo: http://weibo.com/{yourid}
-        # twitter: https://twitter.com/
+        twitter: https://twitter.com/
         # facebook: /
-        rss: /index.xml
-      link_tooltip: false # enable the social link tooltip, options: true, false
+        # rss: /index.xml
+      link_tooltip: true # enable the social link tooltip, options: true, false
   # Site
   site:
     logo:
@@ -109,7 +109,7 @@ params:
       url: favicon.ico
     title: Hugo # 页面title
     favicon: favicon.ico
-    board: <p>enjoy~</p> # 公告牌
+    board: <p>Good good study, day day up!</p> # 公告牌
 
   # Share
   # weibo,qq,qzone,wechat,tencent,douban,diandian,facebook,twitter,google,linkedin
