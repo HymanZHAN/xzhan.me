@@ -63,7 +63,7 @@ menu:
 
 params:
   since: 2019
-  dateFormatToUse: "2006-01-02"
+  dateFormatToUse: "01/02/2006"
   enablePostCopyright: true
   # the directory under content folder that you want to render
   mainSections: ["posts"]
@@ -104,8 +104,8 @@ params:
   site:
     logo:
       enabled: true
-      width: 40
-      height: 40
+      width: 48
+      height: 48
       url: favicon.ico
     title: Hugo # 页面title
     favicon: favicon.ico
@@ -163,7 +163,7 @@ params:
   # wordcount
   postCount:
     enable: true
-    wordcount: true # 文章字数统计
+    wordcount: false # 文章字数统计
     min2read: true # read time 阅读时长预计
 
   # config
