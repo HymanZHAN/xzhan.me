@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify && cp static/avatar.png public/"
+command = "hugo --gc --minify"
 
 [context.production.environment]
 HUGO_VERSION = "0.60.1"
