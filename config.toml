@@ -76,7 +76,7 @@ enableEmoji = true
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
         name = ""
-        url = "https://github.com/HymanZHAN"
+        url = "https://github.com/HymanZHAN/xzhan.me"
         title = "GitHub"
         weight = 5
       [languages.en.params]
@@ -213,6 +213,7 @@ enableEmoji = true
             shortname = ""
           # Gitalk Comment Config (https://github.com/gitalk/gitalk)
           [languages.en.params.comment.gitalk]
+            enable = true
             owner = "HymanZHAN"
             repo = "xzhan.me"
             clientId = "efe037dfabe722b4325d"
@@ -293,7 +294,7 @@ enableEmoji = true
         identifier = "github"
         pre = "<i class='fab fa-github fa-fw'></i>"
         name = ""
-        url = "https://github.com/dillonzq/LoveIt"
+        url = "https://github.com/HymanZHAN/xzhan.me"
         title = "GitHub"
         weight = 5
     [languages.zh-cn.params]
@@ -430,6 +431,7 @@ enableEmoji = true
           shortname = ""
         # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
         [languages.zh-cn.params.comment.gitalk]
+          enable = true
           owner = "HymanZHAN"
           repo = "xzhan.me"
           clientId = "efe037dfabe722b4325d"

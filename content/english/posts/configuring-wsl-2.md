@@ -5,6 +5,7 @@ draft: false
 tags: ["WSL"]
 categories: ["Dev Tools"]
 toc: true
+comment: true
 featuredImage: "/wsl2-win10-ip.png"
 summary: "WSL 2 finally made its way to the slow ring of Windows Preview! I am sure you are excited about the improved I/O performance, but is there anything to watch out for? In this post, I am going to share with you my experience of setting up a web development within WSL2."
 ---
