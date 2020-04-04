@@ -7,7 +7,7 @@ categories: ["Dev Tools"]
 toc: true
 ---
 
-Recently, WSL 2 landed on the slow ring of Windows Preview. As a fan of WSL myself, I am eager to try it out and enjoy the improved I/O performance it brings to the table. So without further delay, I opted in and upgraded Win10 2004 and enabled WSL 2. HOWEVER (there is always a "however"), not all things are smoothed out yet at the time of writing. In this post, I am going to write about my experience of setting up WSL 2 for a Django web development workflow.
+Recently, WSL 2 landed on the slow ring of Windows Preview. As a fan of WSL myself, I've been eager to try it out and enjoy the improved I/O performance it brings to the table. So without further delay, I opted in, upgraded to Win10 2004 and enabled WSL 2. HOWEVER (there is always a "however"), not all things are smoothed out yet at the time of writing. In this post, I am going to write about my experience of setting up WSL 2 for a Django web development workflow.
 
 ## Zsh
 
