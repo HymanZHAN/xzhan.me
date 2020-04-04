@@ -20,6 +20,10 @@ My `.zshrc`:
 # enabling some built-in features
 zstyle ':completion:*' menu select
 autoload -U compinit && compinit
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=1000
+setopt SHARE_HISTORY
 
 # personal aliases
 alias mooc="cd /home/xzhan/Development/MOOC"
@@ -57,6 +61,7 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+# added for zsh-history-substring-search
 source /home/linuxbrew/.linuxbrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
@@ -103,13 +108,13 @@ With a ton of experiments, some of which can be seen in [this GitHub issue](http
 - A nice-looking theme. I really like the [spaceship theme](https://github.com/denysdovhan/spaceship-prompt)
 - History search with up arrow key
 
-After searching for a while, I landed on [starship](https://starship.rs/), a Rust-powered and spaceship-inspired cross-shell prompt which also works with Powershell (Yay!! :hugs:), and this nice [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) plugin. I installed th latter via [homebrew](https://docs.brew.sh/Homebrew-on-Linux). You can configure them just like I did at the end of the `.zshrc` file.
+After searching for a while, I landed on [starship](https://starship.rs/), a Rust-powered and spaceship-inspired cross-shell prompt which also works with Powershell (Yay!! :hugs:), and this nice [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search) plugin. I installed the latter via [homebrew](https://docs.brew.sh/Homebrew-on-Linux). You can configure them just like I did at the end of the `.zshrc` file.
 
 ### Typeface & Nerd Font
 
 As you would expect from a spaceship theme user, I like icons and emojis. However, not all emojis look nice in every terminal on every OS. On the other hand, nerd font icons are much are consistent and renders nicer in VS Code's built-in terminal. You can find [a preset config from starship](https://starship.rs/presets/).
 
-A nice typeface is also critical to a nice CLI experience. As a diehard Consolas fan, I've always been looking around for an open source alternative that I can use across all systems. Luckily, that mission was recently accomplished: [Code New Roman](https://fontsarena.com/code-new-roman-by-sam-radian/) and its nerd font version [CodeNewRoman Nerd Font](https://www.nerdfonts.com/font-downloads). Give them a try if you share the love for Consolas!
+A nice typeface is also critical to a nice CLI experience. As a diehard Consolas fan, I've always been looking around for an open-source alternative that I can use across all systems. Luckily, that mission was recently accomplished: [Code New Roman](https://fontsarena.com/code-new-roman-by-sam-radian/) and its nerd font version [CodeNewRoman Nerd Font](https://www.nerdfonts.com/font-downloads). Give them a try if you share the love for Consolas!
 
 ## Python & Node
 
@@ -136,7 +141,7 @@ If you want to upgrade, please do this right after installing miniconda as I've 
 
 ## Web & Database
 
-Here comes the (a bit) more tricky part. IIRC, previously in WSL 1, you can access the host (Windows) database from inside WSL. Due the the architecture change in WSL 2, you are not able to do that out of the box. Here in [this section](https://docs.microsoft.com/en-us/windows/wsl/wsl2-ux-changes#accessing-network-applications) it says:
+Here comes the (a bit) more tricky part. IIRC, previously in WSL 1, you can access the host (Windows) database from inside WSL. Due to the architecture change in WSL 2, you are not able to do that out of the box. Here in [this section](https://docs.microsoft.com/en-us/windows/wsl/wsl2-ux-changes#accessing-network-applications) it says:
 
 > To access a Windows network application you'll need to use the IP address of your host machine.
 
@@ -233,11 +238,11 @@ DATABASES = {
 
 ## VS Code
 
-Microsoft really provides great tooling for your development workflow on WSL. No surprice, my editor of choice is VS Code. For remote development using WSL, check out [this guide](https://code.visualstudio.com/docs/remote/wsl#_wsl-specific-settings) if you haven't. Not everything applies to WSL 2 just yet but it's still a nice guide. What we need most is the [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension. With it installed, we can now go to any working directory, type `code .`, open up VS Code and start working. Install the extensions you need and enjoy the Linux dev workflow on Windows!
+Microsoft really provides great tooling for your development workflow on WSL. No surprise, my editor of choice is VS Code. For remote development using WSL, check out [this guide](https://code.visualstudio.com/docs/remote/wsl#_wsl-specific-settings) if you haven't. Not everything applies to WSL 2 just yet but it's still a nice guide. What we need most is the [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) extension. With it installed, we can now go to any working directory, type `code .`, open up VS Code and start working. Install the extensions you need and enjoy the Linux dev workflow on Windows!
 
 ## Summary
 
-In this post I discussed how to set up WSL 2 for web development (Django and Vue in my case). Aspects covered include setting up zsh without the dependency on oh-my-zsh, installing Python and Node, and setting up the database for web development.
+In this post, I discussed how to set up WSL 2 for web development (Django and Vue in my case). Aspects covered include setting up zsh without the dependency on oh-my-zsh, installing Python and Node, and setting up the database for web development.
 
 Finally, a big THANK YOU to the awesome folks behind the WSL project! :sparkling_heart: Thanks for making this possible and I really look forward to the first official release!
 
