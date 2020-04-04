@@ -1,10 +1,12 @@
 ---
-title: "Setting up WSL 2 for Web Development"
+title: "WSL2配置指南：搭建一个Django/Vue开发环境"
 date: 2020-04-02T23:35:31-04:00
 draft: true
 tags: ["WSL"]
 categories: ["Dev Tools"]
 toc: true
+featuredImage: "/wsl2-win10-ip.png"
+summary: "近期WSL2终于登陆Windows预览版慢速通道了！今天就吃一回螃蟹，和大家一块儿看看在WSL2上搭建一个Django开发环境时会碰到哪些坑，又有哪些和WSL1不一样的地方。希望能对你有所帮助！"
 ---
 
 Recently, WSL 2 landed on the slow ring of Windows Preview. As a fan of WSL myself, I've been eager to try it out and enjoy the improved I/O performance it brings to the table. So without further delay, I opted in, upgraded to Win10 2004 and enabled WSL 2. HOWEVER (there is always a "however"), not all things are smoothed out yet at the time of writing. In this post, I am going to write about my experience of setting up WSL 2 for a Django web development workflow.
@@ -54,6 +56,8 @@ export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
+# added for zsh-history-substring-search
+HISTFILE=~/.zsh_history
 source /home/linuxbrew/.linuxbrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down

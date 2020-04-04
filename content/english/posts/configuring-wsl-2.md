@@ -5,6 +5,8 @@ draft: false
 tags: ["WSL"]
 categories: ["Dev Tools"]
 toc: true
+featuredImage: "/wsl2-win10-ip.png"
+summary: "WSL 2 finally made its way to the slow ring of Windows Preview! I am sure you are excited about the improved I/O performance, but is there anything to watch out for? In this post, I am going to share with you my experience of setting up a web development within WSL2."
 ---
 
 Recently, WSL 2 landed on the slow ring of Windows Preview. As a fan of WSL myself, I am eager to try it out and enjoy the improved I/O performance it brings to the table. So without further delay, I opted in and upgraded Win10 2004 and enabled WSL 2. HOWEVER (there is always a "however"), not all things are smoothed out yet at the time of writing. In this post, I am going to write about my experience of setting up WSL 2 for a Django web development workflow.

@@ -4,6 +4,7 @@ date: 2019-12-18T11:07:28-05:00
 draft: false
 tags: [Vue, frontend]
 categories: ["Frontend"]
+summary: "Recently, the majority of my work involves integrating Vue in a traditional Django application, which uses jQuery extensively. The first task on this front is to convert a preview modal into a Vue component and add some quick editing functionality. In this post, I will share some refactoring experience and lessons learned along the way."
 ---
 
 Recently, the majority of my work involves integrating Vue in a traditional Django application, which uses jQuery extensively. The first task on this front is to convert a preview modal into a Vue component and add some quick editing functionality. In this post, I will share some refactoring experience and lessons learned along the way.
@@ -42,7 +43,7 @@ The original workflow works as follows:
 - In a global JavaScript file `project-script.js`, there are jQuery functions that sets the event listeners for buttons with class `show-modal`.
 
 ```js
-$(document).ready(function() {
+$(document).ready(function () {
   $(document).on("click", ".show-modal", showClickedModal);
 });
 ```
@@ -69,20 +70,17 @@ function modalConstructor(modalUrl, callback) {
   $(".modal").html(getLoadingIndicator());
   $.ajax({
     url: modalUrl,
-    success: function(data) {
+    success: function (data) {
       $(".modal").replaceWith(data);
-      $(".modal")
-        .children()
-        .find("[autofocus]")
-        .focus();
+      $(".modal").children().find("[autofocus]").focus();
       modalIsOpen = true;
       if (typeof callback === "function") {
         callback();
       }
     },
-    error: function(data) {
+    error: function (data) {
       console.log(data.ResponseText);
-    }
+    },
   });
 }
 
@@ -91,9 +89,7 @@ function getLoadingIndicator() {
 }
 
 function closeModal() {
-  $(".backdrop")
-    .add(".modal")
-    .remove();
+  $(".backdrop").add(".modal").remove();
   modalIsOpen = false;
 }
 ```
@@ -139,15 +135,15 @@ After Vue-ification:
   if (document.getElementById("content-preview")) {
     let contentId = document.getElementById("content-id").textContent;
     let vueContainer = new Vue({
-      render: function(createElement) {
+      render: function (createElement) {
         return createElement("contentPreview", {
           props: {
-            contentId: parseInt(contentId)
-          }
+            contentId: parseInt(contentId),
+          },
         });
       },
       el: "#content-preview",
-      store
+      store,
     });
   }
 </script>
@@ -168,16 +164,16 @@ After Vue-ification:
   export default {
     name: "ContentPreview",
     props: {
-      contentId: Number
+      contentId: Number,
     },
     data() {
       return {
-        content: {}
+        content: {},
       };
     },
     async created() {
       this.content = await dataService.getPreviewContent(contentId);
-    }
+    },
   };
 </script>
 ```
@@ -242,7 +238,7 @@ As shown above, we are placing the modal in `content-list.html` instead of the e
 ```javascript
 document.addEventListener(
   "click",
-  function(event) {
+  function (event) {
     if (event.target.matches(".show-content-preview")) {
       showContentPreview.call(event.target);
     }
@@ -254,15 +250,15 @@ function showContentPreview() {
   if (document.getElementById("content-preview")) {
     let contentId = this.getAttribute("content-id");
     let vueContainer = new Vue({
-      render: function(createElement) {
+      render: function (createElement) {
         return createElement("ContentPreview", {
           props: {
-            contentId: parseInt(contentId)
-          }
+            contentId: parseInt(contentId),
+          },
         });
       },
       el: "#content-preview",
-      store
+      store,
     });
   }
 }
@@ -289,23 +285,23 @@ function showContentPreview() {
   export default {
     name: "ContentPreview",
     props: {
-      contentId: Number
+      contentId: Number,
     },
     data() {
       return {
         content: {},
-        showModal: true
+        showModal: true,
       };
     },
     methods: {
       async closeAndSubmit() {
         this.showModal = false;
         await this.dataService.postUpdatedContent(this.content);
-      }
+      },
     },
     async created() {
       this.content = await dataService.getPreviewContent(contentId);
-    }
+    },
   };
 </script>
 ```

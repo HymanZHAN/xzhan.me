@@ -244,7 +244,7 @@ enableEmoji = true
     # 网站语言, 仅在这里 CN 大写
     languageCode = "zh-CN"
     # 网站标题
-    title = "Xucong的博客"
+    title = "旭聪的博客"
     # 语言名称
     languageName = "简体中文"
     # 是否包括中日韩文字
@@ -327,11 +327,11 @@ enableEmoji = true
           defaultHiddenFromHomePage = false
       # 主页的社交信息设置
       [languages.zh-cn.params.social]
-        GitHub = "xxxx"
+        GitHub = "HymanZHAN"
         # Linkedin = "xxxx"
-        Twitter = "xxxx"
-        Instagram = "xxxx"
-        Email = "xxxx@example.com"
+        Twitter = "xucong_zhan"
+        # Instagram = "xxxx"
+        Email = "zhanxucong@gmail.com"
         # Facebook = "xxxx"
         # Telegram = "xxxx"
         # Medium = "xxxx"
@@ -348,7 +348,7 @@ enableEmoji = true
         # FreeCodeCamp = "xxxx"
         # Bitbucket = "xxxx"
         # Stackoverflow = "xxxx"
-        Weibo = "xxxx"
+        # Weibo = "xxxx"
         # Odnoklassniki = "xxxx"
         # VK = "xxxx"
         # Flickr = "xxxx"
@@ -366,12 +366,12 @@ enableEmoji = true
         # Hackernews = "xxxx"
         # Kickstarter = "xxxx"
         # Patreon = "xxxx"
-        Steam = "xxxx"
+        # Steam = "xxxx"
         # Twitch = "xxxx"
         # Strava = "xxxx"
         # Skype = "xxxx"
         # Whatsapp = "xxxx"
-        Zhihu = "xxxx"
+        Zhihu = "hymanzhan"
         # Douban = "xxxx"
         # Angellist = "xxxx"
         # Slidershare = "xxxx"
@@ -390,7 +390,7 @@ enableEmoji = true
         # Gitea = "xxxx"
         # XMPP = "xxxx@example.com"
         # Matrix = "xxxx"
-        Bilibili = "xxxx"
+        Bilibili = "16956293"
       # 文章页面的分享信息设置
       [languages.zh-cn.params.share]
         enable = true
@@ -412,10 +412,10 @@ enableEmoji = true
         # Stumbleupon = true
         # Flipboard = true
         Weibo = true
-        Renren = true
+        # Renren = true
         # Myspace = true
         # Blogger = true
-        Baidu = true
+        # Baidu = true
         # Odnoklassniki = true
         Evernote = true
         # Skype = true
@@ -430,16 +430,16 @@ enableEmoji = true
           shortname = ""
         # Gitalk 评论系统设置 (https://github.com/gitalk/gitalk)
         [languages.zh-cn.params.comment.gitalk]
-          owner = ""
-          repo = ""
-          clientId = ""
-          clientSecret = ""
+          owner = "HymanZHAN"
+          repo = "xzhan.me"
+          clientId = "efe037dfabe722b4325d"
+          clientSecret = "f38e82b48050ba5d4ab6d9ca41d36ce1e478d731"
         # Valine 评论系统设置 (https://github.com/xCss/Valine)
         [languages.zh-cn.params.comment.valine]
-          enable = true
-          appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
-          appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
-          placeholder = "你的评论 ..."
+          enable = false
+          appId = ""
+          appKey = ""
+          placeholder = ""
           notify = false
           verify = true
           avatar = "mp"
