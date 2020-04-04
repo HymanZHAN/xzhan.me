@@ -4,21 +4,10 @@ date: 2020-04-02T23:35:31-04:00
 draft: false
 tags: ["WSL"]
 categories: ["Dev Tools"]
+toc: true
 ---
 
 Recently, WSL 2 landed on the slow ring of Windows Preview. As a fan of WSL myself, I am eager to try it out and enjoy the improved I/O performance it brings to the table. So without further delay, I opted in and upgraded Win10 2004 and enabled WSL 2. HOWEVER (there is always a "however"), not all things are smoothed out yet at the time of writing. In this post, I am going to write about my experience of setting up WSL 2 for a Django web development workflow.
-
-- [Zsh](#zsh)
-  - [WSL 2 I/O Performance Catch](#wsl-2-io-performance-catch)
-  - [Exclude Windows PATH](#exclude-windows-path)
-  - [Zsh History Search & Starship](#zsh-history-search--starship)
-  - [Typeface & Nerd Font](#typeface--nerd-font)
-- [Python & Node](#python--node)
-- [Web & Database](#web--database)
-  - [Install database in WSL](#install-database-in-wsl)
-  - [Accessing database Running on Windows from WSL](#accessing-database-running-on-windows-from-wsl)
-- [VS Code](#vs-code)
-- [Summary](#summary)
 
 ## Zsh
 
