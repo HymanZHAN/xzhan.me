@@ -143,7 +143,7 @@ You can do so by `cat /etc/resolv.conf` inside WSL, copy the IP address followin
 
 Easy enough for web services. But what about database? Well, here you have two options.
 
-### Install database in WSL
+### Install Database in WSL
 
 One of the more straightforward option is to install your database server inside your WSL 2. It is just the same as installing your database on any Ubuntu-based distro. As for my project, I use MariaDB and you can find [the official instructions here](https://downloads.mariadb.org/mariadb/repositories/#distro=Ubuntu&distro_release=bionic--ubuntu_bionic&mirror=homelab&version=10.4). You will be able to start the database server with `sudo service mysql start`. The problem comes after the installation: How do I inspect the database with my favorite GUI tools like DataGrip/DBeaver/Sequel Pro from Windows?
 
@@ -157,7 +157,7 @@ bind-address=0.0.0.0
 
 After editing, make sure to restart the database server by `sudo service mysql restart`. Now you should be able to access your WSL database via `127.0.0.1:3307`.
 
-### Accessing database Running on Windows from WSL
+### Accessing Database Running on Windows from WSL
 
 **TL;DR** I personally don't recommend this approach because it requires much more workaround.
 
