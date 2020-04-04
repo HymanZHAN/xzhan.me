@@ -67,17 +67,17 @@ A few things to pay attention to here:
 
 WSL 2 has a much improved I/O performance, but only on the Linux partition. As described in [this documentation](https://docs.microsoft.com/en-us/windows/wsl/wsl2-ux-changes#cross-os-file-speed-will-be-slower-in-initial-preview-builds) WSL 2 has a much slower performance when performing cross OS I/O tasks. Outcome include:
 
-- **Unacceptable slow performance with zsh shell prompt/plugins**, like [oh-my-zsh](https://ohmyz.sh/) or [starship](https://starship.rs/). I don't know how the internal implementation of these projects to identify the direct reason, but the outcome is printing a new line takes over 30s :upside_down_face::
+- **Unacceptable slow performance with zsh shell prompt/plugins**, like [oh-my-zsh](https://ohmyz.sh/) or [starship](https://starship.rs/). I don't know enough about the internal implementation of these projects to identify the direct reason, but the outcome is printing a new line takes over 30s :upside_down_face::
 
   ![zsh with starship in Windows User Directory](/zsh-with-starship.gif)
 
 - **Slow start up performance.** Sometimes the WSL prompt can take over 15s to start. One way to mitigate this is to exclude the inclusion of Windows PATH, with which I can reduce the start up time down to 1s. This will be elaborated in the next point.
 
-If you are interested you can follow up the progress at [this Github issue](https://github.com/microsoft/WSL/issues/4197). Note that the problem is clearly known and actively working on so hold yourself from spam the thread with +1 comments.
+If you are interested you can follow up on the progress at [this Github issue](https://github.com/microsoft/WSL/issues/4197). Note that the problem is clearly known and actively working on so hold yourself from spam the thread with +1 comments.
 
 ### Exclude Windows PATH
 
-As mentioned, excluding Windows PATH can bring some nice performance boost. If you are not relying Windows programs anyways, you can safely exclude it by adding this to `/etc/wsl.conf`:
+As mentioned, excluding Windows PATH can bring some nice performance boost. If you are not relying heavily on Windows programs anyways, you can safely exclude it by adding this to `/etc/wsl.conf`:
 
 ```toml
 [Interop]
