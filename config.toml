@@ -465,7 +465,7 @@ enableEmoji = true
   version = "0.1.X"
   # public git repo url only then enableGitInfo is true
   # 公共 git 仓库路径，仅在 enableGitInfo 设为 true 时有效
-  gitRepo = "https://github.com/dillonzq/LoveIt"
+  gitRepo = "https://github.com/HymanZHAN/xzhan.me"
   # which hash function used for SRI, when empty, no SRI is used ("sha256", "sha384", "sha512", "md5")
   # 哪种哈希函数用来 SRI, 为空时表示不使用 SRI ("sha256", "sha384", "sha512", "md5")
   fingerprint = ""
@@ -528,7 +528,7 @@ enableEmoji = true
   # Publisher Info just for SEO
   # 出版者信息，仅用于 SEO
   [params.publisher]
-    name = "xxxx"
+    name = "Xucong Zhan"
     [params.publisher.logo]
       url = "logo.png"
       width = 127
