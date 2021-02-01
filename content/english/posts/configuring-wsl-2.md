@@ -6,7 +6,7 @@ tags: ["WSL"]
 categories: ["Dev Tools"]
 toc: true
 comment: true
-featuredImage: "/wsl2-win10-ip.png"
+featuredImage: "configuring-wsl-2.png"
 summary: "WSL 2 finally made its way to the slow ring of Windows Preview! I am sure you are excited about the improved I/O performance, but is there anything to watch out for? In this post, I am going to share with you my experience of setting up a web development within WSL2."
 ---
 
@@ -77,7 +77,7 @@ WSL 2 has a much improved I/O performance, but only on the Linux partition. As d
 
 - **Unacceptable slow performance with zsh shell prompt/plugins**, like [oh-my-zsh](https://ohmyz.sh/) or [starship](https://starship.rs/). I don't know how the internal implementation of these projects to identify the direct reason, but the outcome is printing a new line takes over 30s :upside_down_face::
 
-  ![zsh with starship in Windows User Directory](/zsh-with-starship.gif)
+  ![zsh with starship in Windows User Directory](zsh-with-starship.gif)
 
 - **Slow start up performance.** Sometimes the WSL prompt can take over 15s to start. One way to mitigate this is to exclude the inclusion of Windows PATH, with which I can reduce the start up time down to 1s. This will be elaborated in the next point.
 
@@ -147,7 +147,7 @@ Here comes the (a bit) more tricky part. IIRC, previously in WSL 1, you can acce
 
 You can do so by `cat /etc/resolv.conf` inside WSL, copy the IP address following "nameserver" and use it in your CLI:
 
-![zsh accessing Windows network application](/zsh-accessing-windows-http.png)
+![zsh accessing Windows network application](zsh-accessing-windows-http.png)
 
 Easy enough for web services. But what about database? Well, here you have two options.
 
@@ -171,7 +171,7 @@ After editing, make sure to restart the database server by `sudo service mysql r
 
 **Warning**: This approach relies on the IP addresses on both the host and guest machine pointing to each other. As [Uzume stated here](https://github.com/microsoft/WSL/issues/4619#issuecomment-592482735), WSL 2 acts more like a virtual machine compared to WSL 1. **HOWEVER, these IP addresses are NOT fixed!** They change on every reboot so you have to reconfigure something every time.
 
-![wsl 2 and win10 ip communication](/wsl2-win10-ip.png)
+![wsl 2 and win10 ip communication](configuring-wsl-2.png)
 
 As shown in the graph above, in the current setting, WSL 2 can access Windows application via `172.21.64.1`, which is the IP address in `/etc/resolv.conf`. By default, Windows share the `127.0.0.1` with WSL 2 and can access network applications running in WSL 2 via `127.0.0.1:<port>` as shown above. You may wonder, "Well, what's the use of that `172.17.131.186` in this case and where does it come from?" :thinking:
 

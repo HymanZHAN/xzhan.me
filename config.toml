@@ -178,11 +178,11 @@ enableEmoji = true
         [languages.en.params.share]
           enable = true
           Twitter = true
-          # Facebook = true
+          Facebook = true
           Linkedin = true
           # Whatsapp = true
           # Pinterest = true
-          # Tumblr = true
+          Tumblr = true
           HackerNews = true
           Reddit = true
           # VK = true
