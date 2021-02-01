@@ -53,7 +53,7 @@ export axios
 ```ts
 import ky, { Options } from "ky";
 
-const baseUrl = "http://api.base.com/api";
+const baseUrl = "http://apis.somecourseurl.com/api/";
 const secretCode = "this-is-super-secret-code";
 const secretCodeParam = `secretCode=${secretCode}`;
 
@@ -135,6 +135,6 @@ Here we also made use of the `afterResponse` hook.
 
 ## Conclusion
 
-There you have it! A nicely configured `ky` instance at your disposal. Check out [ky](https://github.com/sindresorhus/ky)'s doc to make use of its other features and configurations. And a big shout out to Sindre for making this nice library! Give it a :star: if you enjoy it!
+There you have it! A nicely configured `ky` instance at your disposal. Check out [ky](https://github.com/sindresorhus/ky)'s doc to make use of its other features and configurations. And a big shout out to Sindre for making such a nice library! Give it a :star: if you enjoy it!
 
 Thanks for reading my post and happy coding!
