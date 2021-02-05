@@ -7,6 +7,7 @@ categories: ["Frontend"]
 toc: true
 comment: true
 featuredImage: "modify-ky-request.png"
+summary: 'Axios is no doubt one of the most popular libraries out there to make HTTP calls, but let''s not forget now we have something equally powerful built into our browser: the Fetch API. In this post, I am going to share my experience of how to achieve the common use case of interceptors with a Fetch-based HTTP client library named "ky".'
 ---
 
 ## Background
@@ -125,16 +126,20 @@ export const api = ky
   .create({ prefixUrl: baseUrl, searchParams: icodeParam })
   .extend({
     hooks: {
-      beforeRequest: [addIcodeToPostBody, /*new->*/ showLoading],
+      beforeRequest: [/*new->*/ showLoading, addIcodeToPostBody],
       afterResponse: [/*new->*/ hideLoading],
     },
   });
 ```
 
-Here we also made use of the `afterResponse` hook.
+Here we also made use of the `afterResponse` hook. **However**, there is something to look out for. As described in the doc:
+
+> An **important** consideration when returning a request or response from this hook is that any remaining beforeRequest hooks will be skipped, so you may want to only return them from the last hook.
 
 ## Conclusion
 
-There you have it! A nicely configured `ky` instance at your disposal. Check out [ky](https://github.com/sindresorhus/ky)'s doc to make use of its other features and configurations. And a big shout out to Sindre for making such a nice library! Give it a :star: if you enjoy it!
+There you have it! A nicely configured `ky` instance at your disposal. In this post we learned about how you can make use of the `beforeRequest` and `afterResponse` hooks to achieve similar functionalities as in `axios`' interceptors. Check out [ky](https://github.com/sindresorhus/ky)'s doc to make use of its other features and configurations. A big shout out to Sindre for making such a nice library! :tada: Give it a :star: if you enjoy it!
 
-Thanks for reading my post and happy coding!
+Next time I will share my experience on how to configure `ky` to include Authorization header for JWT authentication so stay tuned! 
+
+Thanks for reading and happy coding! :computer:

@@ -2,8 +2,10 @@
 title: "Create Vue Components as, not inside, Modals"
 date: 2019-12-18T11:07:28-05:00
 draft: false
-tags: [Vue, frontend]
+tags: [Vue]
 categories: ["Frontend"]
+toc: true
+comment: true
 summary: "Recently, the majority of my work involves integrating Vue in a traditional Django application, which uses jQuery extensively. The first task on this front is to convert a preview modal into a Vue component and add some quick editing functionality. In this post, I will share some refactoring experience and lessons learned along the way."
 ---
 
