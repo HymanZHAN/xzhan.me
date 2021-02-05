@@ -98,7 +98,7 @@ Therefore, we are doing the following things with these two arguments:
 - Determine the HTTP method. Only modify the payload if it's a `POST` request.
 - Grab the `POST` body from `options.body`
   - If the body is an instance of `FormData`, i.e. the request is a form submission with `Content-Type` of `multipart/form-data`, append the `secretCode` at the end.
-  - If the payload is in `options.json`, we include our `secretCode` insde it.
+  - If the payload is in `options.json`, we include our `secretCode` inside it.
 - Return a new `Request` based off of the original request, with a only the `options.body` modified:
   ```ts
   // basically a copy constructor
@@ -132,7 +132,7 @@ export const api = ky
   });
 ```
 
-Here we also made use of the `afterResponse` hook. 
+Here we also made use of the `afterResponse` hook.
 
 **NOTICE** that we are putting the `showLoading` function at the beginning. Order matters! Or rather, the position of the hook function that **returns** a `Request` matters. As described in the doc:
 
@@ -142,6 +142,6 @@ Here we also made use of the `afterResponse` hook.
 
 There you have it! A nicely configured `ky` instance at your disposal. In this post we learned about how you can make use of the `beforeRequest` and `afterResponse` hooks to achieve similar functionalities as in `axios`' interceptors. Check out [ky](https://github.com/sindresorhus/ky)'s doc to make use of its other features and configurations. A big shout out to Sindre for making such a nice library! :tada: Give it a :star: if you enjoy it!
 
-Next time I will share my experience on how to configure `ky` to include Authorization header for JWT authentication so stay tuned! 
+Next time I will share my experience on how to configure `ky` to include Authorization header for JWT authentication so stay tuned!
 
 Thanks for reading and happy coding! :computer:
