@@ -132,7 +132,9 @@ export const api = ky
   });
 ```
 
-Here we also made use of the `afterResponse` hook. **However**, there is something to look out for. As described in the doc:
+Here we also made use of the `afterResponse` hook. 
+
+**NOTICE** that we are putting the `showLoading` function at the beginning. Order matters! Or rather, the position of the hook function that **returns** a `Request` matters. As described in the doc:
 
 > An **important** consideration when returning a request or response from this hook is that any remaining beforeRequest hooks will be skipped, so you may want to only return them from the last hook.
 
