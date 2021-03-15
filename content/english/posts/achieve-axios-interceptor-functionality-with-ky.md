@@ -61,11 +61,17 @@ const secretCodeParam = `secretCode=${secretCode}`;
 const addSecretCodeToPostBody = (request: Request, options: Options) => {
   if (request.method == "POST") {
     if (options.body instanceof FormData) {
-      const newBody = options.body;
-      newBody.append("secretCode", secretCode);
-      return new Request(request, {
-        body: newBody,
-      });
+      // INCORRECT:
+      // const newBody = options.body;
+      // newBody.append("secretCode", secretCode);
+      // return new Request(request, {
+      //   body: newBody,
+      // });
+
+      // UPDATED:
+      request.headers.delete("content-type");
+      options.body.append("icode", icode);
+      return new Request(request, options as RequestInit);
     } else if (options.json instanceof Object) {
       return new Request(request, {
         body: JSON.stringify({ ...options.json, secretCode }),
@@ -102,8 +108,16 @@ Therefore, we are doing the following things with these two arguments:
 - Return a new `Request` based off of the original request, with a only the `options.body` modified:
   ```ts
   // basically a copy constructor
-  return new Request(request, {body: <Your New Body>,});
+  return new Request(request, {body: <Your New Body>});
   ```
+
+### Update 2020-03-14:
+
+The original proposed method was discovered to be problematic. The key thing here is for `FormData` to be correctly parsed, the request header `Content-Type` will need to include something called `boundary` (see the screenshot below). It's used to separate different fields inside the `FormData`'s body.
+
+![Content-Type Header with Boundary](content-type-header-with-boundary.png)
+
+When we create a new request with `return new Request(request, {body: <Your New Body>})`, we are reusing the `Content-Type` header and thus the outdated boundary value while a new boundary value gets generated for the updated `FormData` instance. Therefore, the boundary in the header and the one in the request body is out of sync. (I don't know how and when the boundary gets generated and I'd be super happy if you can teach me about it! :smile:) No matter what your backend is, the server will not be able to parse the form payload. This is also why when you use Fetch API, you would **not** want to set the `Content-Type` header yourself if you are submitting a `FormData` payload.
 
 ## Some Extra Tricks
 
