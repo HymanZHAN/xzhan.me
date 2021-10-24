@@ -217,7 +217,7 @@ enableEmoji = true
             owner = "HymanZHAN"
             repo = "xzhan.me"
             clientId = "efe037dfabe722b4325d"
-            clientSecret = "f38e82b48050ba5d4ab6d9ca41d36ce1e478d731"
+            clientSecret = "18d90008c4cdfeec503c7d900e0dce01eb0175a2"
           # Valine Comment Config (https://github.com/xCss/Valine)
           [languages.en.params.comment.valine]
             enable = false
