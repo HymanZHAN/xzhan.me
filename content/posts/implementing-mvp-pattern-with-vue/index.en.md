@@ -5,7 +5,6 @@ draft: true
 tags: ["Vue"]
 categories: ["Frontend"]
 toc: true
-comment: true
 featuredImage: ""
 summary: "MVP Pattern with Vue"
 ---

@@ -8,4 +8,6 @@ toc: true
 featuredImage: ""
 featuredImagePreview: ""
 summary: ""
+toc: true
+autoCollapseToc: true
 ---

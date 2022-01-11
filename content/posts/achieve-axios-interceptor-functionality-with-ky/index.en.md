@@ -116,7 +116,7 @@ Therefore, we are doing the following things with these two arguments:
 
 The original proposed method was discovered to be problematic. The key thing here is for `FormData` to be correctly parsed, the request header `Content-Type` will need to include something called `boundary` (see the screenshot below). It's used to separate different fields inside the `FormData`'s body.
 
-![Content-Type Header with Boundary](content-type-header-with-boundary.png)
+{{< image src="content-type-header-with-boundary.png" caption="Content-Type Header with Boundary" >}}
 
 When we create a new request with `return new Request(request, {body: <Your New Body>})`, we are reusing the `Content-Type` header and thus the outdated boundary value while a new boundary value gets generated for the updated `FormData` instance. Therefore, the boundary in the header and the one in the request body is out of sync. (I don't know how and when the boundary gets generated and I'd be super happy if you can teach me about it! :smile:) No matter what your backend is, the server will not be able to parse the form payload. This is also why when you use Fetch API, you would **not** want to set the `Content-Type` header yourself if you are submitting a `FormData` payload.
 

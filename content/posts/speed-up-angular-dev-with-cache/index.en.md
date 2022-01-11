@@ -82,16 +82,12 @@ My personal project is a pretty simple one but you can still get a good sense of
 
 ### `ng build`
 
-<p align="center">
-    <img src="ng-build.svg" width="50%" >
-</p>
+{{< image src="ng-build.svg" caption="`ng build`" width="60%" >}}
 
 
 ### `TAILWIND_MODE=watch ng serve --hmr`
 
-<p align="center">
-    <img src="ng-serve.svg" width="50%" >
-</p>
+{{< image src="ng-serve.svg" caption="`ng serve`" width="60%" >}}
 
 Amazing! :tada: For `ng build`, I am able to achieve a whopping 66% build time reduction for the second run, with the cost of the first run being slightly slower. For `ng serve`, it's a similar story where I am able to cut the time by over 50% starting from the second run.
 

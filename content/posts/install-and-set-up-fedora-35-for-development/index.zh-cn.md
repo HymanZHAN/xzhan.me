@@ -5,7 +5,6 @@ draft: true
 tags: ["Linux", "Fedora"]
 categories: ["开发工具"]
 toc: true
-comment: true
 featuredImage: "featured.svg"
 featuredImagePreview: "featured-preview.png"
 summary: ""
