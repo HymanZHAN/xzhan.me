@@ -7,5 +7,6 @@ categories: []
 toc: true
 comment: true
 featuredImage: ""
+featuredImagePreview: ""
 summary: ""
 ---

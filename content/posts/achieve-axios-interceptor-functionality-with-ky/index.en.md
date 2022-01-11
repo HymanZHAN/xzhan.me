@@ -6,7 +6,8 @@ tags: ["ky", "axios"]
 categories: ["Frontend"]
 toc: true
 comment: true
-featuredImage: "modify-ky-request.png"
+featuredImage: "featured.svg"
+featuredImagePreview: "featured.png"
 summary: 'Axios is no doubt one of the most popular libraries out there to make HTTP calls, but let''s not forget now we have something equally powerful built into our browser: the Fetch API. In this post, I am going to share my experience of how to achieve the common use case of interceptors with a Fetch-based HTTP client library named "ky".'
 ---
 
