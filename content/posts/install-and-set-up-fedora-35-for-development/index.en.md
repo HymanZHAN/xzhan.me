@@ -13,7 +13,7 @@ summary: ""
 
 Recently, I find myself quite a bit distracted when using Windows for work, with all social media and entertainment apps readily available, so I want a more focused working environment. I have not used Linux since I decided to do a fresh install of Fedora 34 when it first came out and failed. The live USB image behaved quite strangely that time, greeting me with only a blank desktop with no cursor and no installation prompt. As it turned out, the live image worked perfectly fine, but because my PC was connected to my TV (which was off btw) it treated the TV as the primary screen, so my cursor and the installation prompt were not showing on my monitor.
 
-Anyways, enough of my stupid miss. Let's dive into my setup and some of the pitfalls I've encountered in the process, so you will have a better idea it comes to your Linux setup.
+Anyways, enough of my stupid miss. Let's dive into my setup and some of the pitfalls I've encountered in the process, so you will have a better idea when it comes to your Linux setup.
 
 ## Installation (Dual-Boot with Windows)
 
@@ -37,7 +37,7 @@ With Fedora 35 comes the latest Gnome 41, which is quite a bit different from wh
 
 ### Keyboard Shortcuts
 
-As you have probably noticed, Gnome 40 comes with a horizontal workspace layout. Personally, I find it easier switch between Windows and Linux as workspace/desktop navigation can now use the same set of keyboard shortcuts, which is pretty nice. The **problem** is that with a horizontal workspace in, shortcuts for horizontal workspace navigation are out.
+As you have probably noticed, Gnome 40 comes with a horizontal workspace layout. Personally, I find it easier switch between Windows and Linux now as workspace/desktop navigation can now use the same set of keyboard shortcuts, and that is pretty nice. The **problem** is that with a horizontal workspace in, shortcuts for vertical workspace navigation are removed from the settings.
 
 {{< image src="gnome-settings-workspace-shortcuts.png" caption="Horizontal Workspace Shortcuts Gone" width="60%" >}}
 
@@ -51,7 +51,7 @@ For me personally, not disabling such deprecated shortcuts by default **and also
 
 ### Emoji Input
 
-Continuing the complaint of shortcuts, `Ctrl+.` is the default hotkey for toggling emoji input and if you are a VS Code user, you know how annoying this is. There are two ways you can configure it:
+Continuing the complaint of shortcuts, `Ctrl+.` is configured as the default hotkey for toggling emoji input and if you are a VS Code user, you know how annoying this is. There are two ways you can change it:
 
 - Install `ibus-setup` by `sudo dnf install ibus-setup`, launch it from the terminal and configure it in the `Emoji` tab.
 - Install `dconf Editor` and configure `/desktop/ibus/panel/emoji/hotkey`
@@ -80,11 +80,11 @@ Apps on Linux has always been an interesting area to me, and I am happy to say t
 
 ### Electron Apps (Mailspring, Etcher, etc.)
 
-{{< admonition tip "It's NVIDIA AGAIN, sort of" >}}
+{{< admonition tip "It's Nvidia AGAIN! (sort of)" >}}
 Just remember to add the goddamned **`--disable-gpu-sandbox`**
 {{< /admonition >}}
 
-Sorry for the use of foul language but this has tripped me up in a dozen apps and I was super upset. :imp: IIRC, it seems to be plaguing all apps that are not using the latest version of Election, both on Wayland and Xorg. Because I have been running solely on a discrete GTX1080 and switched to Xorg from Day 1, I can't really say for Wayland. But if you are running Xorg with Nvidia driver, add  `--disable-gpu-sandbox` and hopefully, it will solve your `The display compositor is frequently crashing. Goodbye.` and mysterious `core dumped` errors too.
+This one is particularly annoying as it affects a dozen apps that I use frequently. :imp: IIRC, it seems to be plaguing all apps that are not using the latest version of Election, both on Wayland and Xorg. Because I have been running solely on a discrete GTX1080 and switched to Xorg from Day 1, I can't really say for Wayland. But if you are running Xorg with Nvidia driver, add  `--disable-gpu-sandbox` and hopefully, it will solve your `The display compositor is frequently crashing. Goodbye.` and mysterious `core dumped` errors too.
 
 {{< admonition tip "Some more discussion on this issue" >}}
 - [My Post on Mailspring Discourse](https://community.getmailspring.com/t/unable-to-launch-the-app-on-fedora-35/3424)
@@ -100,11 +100,11 @@ To apply this fix to launcher/desktop files, simply locate the corresponding `.d
 Exec=mailspring --disable-gpu-sandbox %U # add --disable-gpu-sandbox here as such
 ```
 
-### `.deb`-only Apps (Lunacy)
+### `.deb`-only Apps (e.g. Lunacy)
 
 Follow [this tutorial](https://fedingo.com/how-to-convert-deb-to-rpm-files-in-linux/) to convert a deb installer to rpm format. The `alien` package can be installed by  `sudo dnf install alien`. In the case of Lunacy, simply download the deb file and run `sudo alien -r -c Lunacy.deb`. Works beautifully for me! :raised_hands: You could turn to the snap package of course, but the slow startup time is really a bad experience. I wish they will add flatpak support in the future.
 
-### Avalonia Apps (Lunacy)
+### Avalonia Apps (e.g. Lunacy)
 
 Your Avalonia apps might not scale correctly and the UI font might be tiny if you are using a HiDPI display and running X11 like me. In this case, you can add `export AVALONIA_SCREEN_SCALE_FACTORS="DP-0=2.0"` to your `~/.profile` file.  More details can be found [here in Avalonia's GitHub Wiki](https://github.com/AvaloniaUI/Avalonia/wiki/Configuring-X11-per-monitor-DPI).
 
@@ -124,4 +124,4 @@ The gist of the story is that WeChat runs quite well on CrossOver right out of t
 
 ## Summary
 
-Fedora has always been my go-to when it comes to Linux distro. Latest packages that really suits my development use case, a vanilla Gnome experience that also serves as a great foundation for personalized tweaking and customizing, fast and stable day-to-day performance, etc. There are a lot of good things about it. However, there are hiccups here and there, partly being a Linux distro and partly being Fedora. Hope this guide can save you some time and headaches in your Fedora journey. In my next blog, I will spend some time on the application side of things and talk about the apps I use on a daily basis. See you there! :wave: 
+Fedora has always been my go-to when it comes to Linux distro. Latest packages that really suits my development use case, a vanilla Gnome experience that also serves as a great foundation for personalized tweaking and customizing, fast and stable day-to-day performance, etc. There are a lot of good things about it. However, there can be hiccups every now and then, partly being a Linux distro and partly being Fedora. Hope this guide can save you some time and headaches in your Fedora journey. In my next blog, I will spend some time on the application side of things and talk about the apps I use on a daily basis. See you there! :wave: 
