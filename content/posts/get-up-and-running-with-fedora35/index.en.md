@@ -23,7 +23,6 @@ First, remember to disable Secure Boot and Fast Boot in you motherboard's BIOS, 
 
 The second point is a bit more hardware-specific. Usually, people have only one large disk and install both Windows and Fedora on it. However, I want to keep the two clean and separated, so I have a **dedicated** SSD for my Linux installation. When you install Fedora on a drive with a preexisting Windows installation, Anaconda, the Fedora installer, is usually intelligent enough and will pick up Windows in most cases. Hence, when you boot into Fedora and get to the grub2 page, there will be a Windows option for you to boot into Windows.
 
-<!-- ![Fedora GRUB with Windows](https://www.tecmint.com/wp-content/uploads/2017/11/Fedora-Windows-Dual-boot-Menu.png "Fedora Grub2 with Windows") -->
 
 {{< image src="https://www.tecmint.com/wp-content/uploads/2017/11/Fedora-Windows-Dual-boot-Menu.png" caption="Fedora Grub2 with Windows" width="70%" >}}
 
