@@ -1,7 +1,7 @@
 ---
 title: "Setting up Fedora (Wayland) on the Framework Laptop"
 date: 2022-01-28T14:36:51-05:00
-draft: true
+draft: false
 tags: ["Linux", "Fedora"]
 categories: ["Dev Tools"]
 toc: true
