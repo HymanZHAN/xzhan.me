@@ -23,7 +23,6 @@ First, remember to disable Secure Boot and Fast Boot in you motherboard's BIOS, 
 
 The second point is a bit more hardware-specific. Usually, people have only one large disk and install both Windows and Fedora on it. However, I want to keep the two clean and separated, so I have a **dedicated** SSD for my Linux installation. When you install Fedora on a drive with a preexisting Windows installation, Anaconda, the Fedora installer, is usually intelligent enough and will pick up Windows in most cases. Hence, when you boot into Fedora and get to the grub2 page, there will be a Windows option for you to boot into Windows.
 
-<!-- ![Fedora GRUB with Windows](https://www.tecmint.com/wp-content/uploads/2017/11/Fedora-Windows-Dual-boot-Menu.png "Fedora Grub2 with Windows") -->
 
 {{< image src="https://www.tecmint.com/wp-content/uploads/2017/11/Fedora-Windows-Dual-boot-Menu.png" caption="Fedora Grub2 with Windows" width="70%" >}}
 
@@ -75,6 +74,17 @@ As per [this reddit post](https://www.reddit.com/r/Fedora/comments/jhxbdh/no_ssh
 Host git.imooc.com
   PubkeyAcceptedKeyTypes=ssh-rsa
 ```
+
+### Nvidia GPU
+
+You can install Nvidia driver from the [RPM Fusion](https://rpmfusion.org/Howto/NVIDIA) repo.
+
+{{< admonition tip "RPM Fusion is your best friend" >}}
+You should always enable [RPM Fusion](https://rpmfusion.org/) after installing Fedora. 
+{{< /admonition >}}
+
+If you are running Fedora on a laptop, Optimus should work right out of the box. However, if you don't care much about battery life but want to make the most use of your dedicated Nvidia GPU all the time (Gnome's UI will also be noticeably smoother), you can follow [this guide](https://docs.fedoraproject.org/en-US/quick-docs/how-to-set-nvidia-as-primary-gpu-on-optimus-based-laptops/) from Fedora's doc and set it as your primary GPU.
+
 ## Apps
 Apps on Linux has always been an interesting area to me, and I am happy to say that it has improved quite a LOT over the years. Here I will not post a lengthy list of apps that I use (that would probably be a post of its own), but instead I will talk about some issues and workarounds for a few app categories.
 
@@ -121,6 +131,11 @@ The author, which is myself, is **not** affiliated with CodeWeavers, and **nor**
 {{< /admonition >}}
 
 The gist of the story is that WeChat runs quite well on CrossOver right out of the box. However, before I got that far some extra steps were required for the successful installation of CrossOver.
+sud
+
+### Firefox Video Playback
+
+You might find Firefox super slow when playing videos, especially HD videos on YouTube in full screen. Enable RPM Fusion and install ffmpeg. It will probably solve your issue. If you are running an Optimus device, you might also want to try turning on `layers.acceleration.force-enabled`. 
 
 ## Summary
 
