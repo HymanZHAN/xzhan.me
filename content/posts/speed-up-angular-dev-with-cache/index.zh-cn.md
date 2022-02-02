@@ -1,7 +1,7 @@
 ---
 title: "Speed Up Angular Dev With Cache"
 date: 2021-10-23T20:10:52-04:00
-draft: false
+draft: true
 
 tags: ["Angular"]
 categories: ["Frontend"]
