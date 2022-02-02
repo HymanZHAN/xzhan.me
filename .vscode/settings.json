@@ -1,11 +1,13 @@
 {
-    "cSpell.words": [
-        "Dockerization",
-        "Podman",
-        "Xucong",
-        "Zhan",
-        "endfor",
-        "ification",
-        "routable"
-    ]
+  "cSpell.words": [
+    "Dockerization",
+    "endfor",
+    "Highlightable",
+    "ification",
+    "linenos",
+    "Podman",
+    "routable",
+    "Xucong",
+    "Zhan"
+  ]
 }
