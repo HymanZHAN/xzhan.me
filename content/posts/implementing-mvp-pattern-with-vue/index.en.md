@@ -13,7 +13,7 @@ summary: "MVP Pattern with Vue"
 
 For the past few weeks, my major task has been refactoring the old step-wise drafting process of our app into a much more simplified one. Instead of dividing the drafting and submission process into several steps like _Drafting_, _Tagging_, _Feedback_ and _Finalize_, the goal is to have one unified interface where the features previously scattered across different steps can be integrated in one UI by a plug-in manner, similar to how VS Code plugins add new functionalities to the [Activity Bar and Side Bar](https://code.visualstudio.com/docs/getstarted/userinterface).
 
-![New Drafting Process Design](a-new-drafting-process.svg)
+{{< image src="a-new-drafting-process.svg" caption="New Drafting Process Design" width="75%" >}}
 
 The benefits are obvious: No duplicate event handlers implemented for shared components used across different pages; No need to care about updating data to the backend before navigating to other steps; The app feels more like an SPA and less like web pages; The new UI feels much more intuitive to new users, etc.
 
@@ -109,8 +109,8 @@ loadRightComponent(componentName) {
 },
 ```
 
-Nice! We have a functional dynamic component setup and `ExampleView` works as expected! :sparkles: However, we have introduced a big problem here. Have you spotted it? :detective:
+Nice! We have a functional dynamic component setup and `ExampleView` works as expected! :sparkles: However, we have introduced a big problem here. Have you spotted it? :mag:
 
-That's right! All these `ExampleView`'s implementation details (data, computed properties, event handlers, etc.) are actually living inside the `Drafting` component. Not only does it violate the single responsibility principle, but it also maintainability and extensibility down the road. As more "plugin" features are added to this interface, we can expect a 1000-line Vue component in the not-too-distant future. :scream: We definitely need a better structure to organize this, and that brings us to the meat of this blog post the Model-View-Presenter pattern.
+That's right! All these `ExampleView`'s implementation details (data, computed properties, event handlers, etc.) are actually living inside the `Drafting` component. Not only does it violate the single responsibility principle, but it will also hurt maintainability and extensibility down the road. As more "plugin" features are added to this interface, we can expect a 1000-line Vue component in the not-too-distant future. :scream: We definitely need a better structure to organize this, and that brings us to the meat of this blog post the Model-View-Presenter pattern.
 
 ### MVP (Model-View-Presenter) Pattern
