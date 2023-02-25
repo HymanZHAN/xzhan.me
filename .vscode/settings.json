@@ -2,20 +2,27 @@
   "cSpell.words": [
     "Actix",
     "Astro",
+    "AVALONIA",
+    "Avalonia's",
+    "distro",
     "Dockerization",
     "endfor",
+    "flatpak",
     "Highlightable",
     "ification",
+    "IIRC",
     "Intelli",
     "linenos",
+    "Mailspring",
     "Nvim",
+    "Optimus",
     "Podman",
     "routable",
     "SAPUI",
     "touchpad",
+    "Xorg",
     "Xucong",
     "Zhan"
   ],
-  "SAP HANA Database Explorer.displaySapWebAnalyticsStartupNotification": false,
-  "SAP HANA Database Explorer.enableSapWebAnalytics": false
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }

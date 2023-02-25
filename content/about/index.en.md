@@ -28,7 +28,7 @@ I am Xucong Zhan, a frontend + backend developer aiming to become truly full-sta
 
 ## Interests (probably should have focused more...)
 
-- Languages: TypeScript，Java，C#，Rust，Golang
-- Frameworks: Spring Boot，FastAPI，ASP.NET Core，Actix，Angular，Vue，Web Assembly
-- Containers: Docker，Podman 和 OpenShift
-- Dev Tools: VS Code，IntelliJ，WSL 和 ~~Vim~~ NeoVim (Discovered [AstroNvim](https://astronvim.github.io/) some time ago and had been using it ever since. Love it! :heart:)
+- Languages: TypeScript, Java, C#, Rust, Golang
+- Frameworks: Spring Boot, FastAPI, ASP.NET Core, Actix, Angular, Vue,and Web Assembly
+- Containers: Docker, Podman and OpenShift
+- Dev Tools: VS Code, IntelliJ, WSL and ~~Vim~~ NeoVim (Discovered [AstroNvim](https://astronvim.github.io/) some time ago and had been using it ever since. Love it! :heart:)

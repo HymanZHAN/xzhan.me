@@ -42,7 +42,8 @@ As nice as it is, this extension cannot map gestures to keyboard shortcuts, whic
 
 - Install dependencies: `sudo dnf install cmake gcc-c++ scdoc`
 - Install ydotool:
-  ```
+
+  ```shell
   git clone https://github.com/ReimuNotMoe/ydotool
   cd ydotool
   mkdir build
@@ -50,24 +51,29 @@ As nice as it is, this extension cannot map gestures to keyboard shortcuts, whic
   cmake ..
   make -j `nproc`
   ```
+
 - Copy compiled binaries to one of the locations in `$PATH`: `cp -t /usr/local/bin ~/ydotool/build/ydotool ~/ydotool/build/ydotoold`
 - Configure ydotool service:
+
   ```shell
   cp ~/ydotool/build/ydotool.service /usr/lib/systemd/system/ydotool.service
   sudo systemctl daemon-reload
   sudo systemctl enable ydotool.service
   sudo systemctl start ydotool.service
   ```
+
 - Disable password requirement when executing `sudo ydotool`
   - Edit `/etc/sudoers`: `sudo visudo`
   - Add this to the end: <your_username> ALL=(ALL) NOPASSWD: /usr/local/bin/ydotool
   - Check if you messed up while editing `/etc/sudoers`: `sudo visudo -cs`. If there is a error here, revert the changes or you might break your superuser rights.
 - Check if everything is working: `sudo /usr/local/bin/ydotool key alt+tab`
 - Update `~/.config/libinput-gestures.conf`:
-  ```
+
+  ```shell
   gesture swipe left 3    sudo ydotool key alt+Left
   gesture swipe right 3    sudo ydotool key alt+Right
   ```
+
 - Restart libinput-gestures: `libinput-gestures-setup restart`. You should be good to go!
 
 ### X Cursor Theme
@@ -84,6 +90,6 @@ I don't know why adding it to `~/.profile` is not working. Shouldn't `~/.profile
 
 I really like the Framework laptop and I am happy to report that Fedora runs super well on it. Gnome 41 with Wayland feels fast and responsive. You even get a GUI to set fingerprints and you can use finger print to authorize sudo commands! How cool is that! :heart_eyes:
 
-What's most surprising is how smooth and fluid the touchpad gestures and corresponding animation felt. I know it may sound a bit crazy, but it's getting pretty close to what a MacOS + MacBook touchpad feels like. :scream_cat: I can safely say it's better than my XPS 15 7590 (i7 4k model) with Windows 11. I _**do**_ hope touchpad gesture customization will land soon and X cursor themes can just work as before.
+What's most surprising is how smooth and fluid the touchpad gestures and corresponding animation felt. I know it may sound a bit crazy, but it's getting pretty close to what a MacOS + MacBook touchpad feels like. :scream\*cat: I can safely say it's better than my XPS 15 7590 (i7 4k model) with Windows 11. I **\*do**\_ hope touchpad gesture customization will land soon and X cursor themes can just work as before.
 
 Hope you find this post helpful and hope to see you in the next one! :wave:
