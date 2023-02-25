@@ -1,8 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap");
 
-$code-font-family: Consolas, Monaco, Fira Code, monospace;
+$code-font-family: Fira Code, Consolas, Monaco, monospace;
 
-$code-font-size: 14px;
+$code-font-size: 13px;
 
-$global-font-family: -apple-system, BlinkMacSystemFont, Nunito Sans, PingFang SC,
-  Microsoft Yahei, Segoe UI, Helvetica, Arial, sans-serif, Segoe UI Emoji;
+$global-font-family: -apple-system, BlinkMacSystemFont, Source Sans Pro,
+  PingFang SC, Microsoft Yahei, Segoe UI, Helvetica, Arial, sans-serif,
+  Segoe UI Emoji;
