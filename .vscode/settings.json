@@ -1,14 +1,21 @@
 {
   "cSpell.words": [
+    "Actix",
+    "Astro",
     "Dockerization",
     "endfor",
     "Highlightable",
     "ification",
+    "Intelli",
     "linenos",
+    "Nvim",
     "Podman",
     "routable",
+    "SAPUI",
     "touchpad",
     "Xucong",
     "Zhan"
-  ]
+  ],
+  "SAP HANA Database Explorer.displaySapWebAnalyticsStartupNotification": false,
+  "SAP HANA Database Explorer.enableSapWebAnalytics": false
 }
