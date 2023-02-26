@@ -1,5 +1,5 @@
 ---
-title: "Clone the Vue 3 starter project to Angular"
+title: "Cloned the Vue 3 starter project in Angular"
 subtitle: "How do they compare?"
 date: 2023-02-25T21:13:18+08:00
 draft: false
