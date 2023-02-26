@@ -15,6 +15,8 @@ autoCollapseToc: true
 
 **TL;DR;** The code can be found [here](https://github.com/HymanZHAN/ng-starter-demo).
 
+**Update**: The live demo lives [here](https://ng-starter-demo.netlify.app/).
+
 As indicated by previous blogs, I use Vue 2 at work. I haven"t been able to do that as I have moved and switched jobs. Now I am dealing with a totally different beast ([SAPUI5](https://ui5.sap.com/) :upside_down_face:). As a close follower of the tech trend (maybe a bit too close :sweat_smile:), I have been long aware of Vite, the new cool kid in town. It"s fast, with good DX and much more, so I am tempted to try it out with a familiar framework, so that"s what I did with the new Vue 3 starter project.
 
 I am pleasantly surprised by the new starter app. The default starter page looks nice and clean, with good information and a nice layout. It immediately occurred to me: Can I clone an Angular version of this? For fun and for performance comparison or whatnot? That seems like a good weekend project. So here"s the result.
