@@ -16,7 +16,7 @@ autoCollapseToc: true
 
 Angular is about to release v13!
 
-{{< tweet 1451642769819242498 >}}
+{{< tweet user="angular" id="1451642769819242498" >}}
 
 One of the new features that excites me the most is the persistent build cache. In v12.1, this feature was introduced as an opt-in by the CLI via an environment variable `NG_PERSISTENT_BUILD_CACHE=1`. Now this environment variable has been disabled. Instead, this caching feature is now enabled by default and can be configured inside `angular.json` under the `cli` option. If you want to learn more about this feature, [here is the RFC discussion](https://github.com/angular/angular-cli/issues/21545).
 
