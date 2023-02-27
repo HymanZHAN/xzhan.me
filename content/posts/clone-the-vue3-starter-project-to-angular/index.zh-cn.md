@@ -25,7 +25,7 @@ autoCollapseToc: true
 
 ## 打包大小
 
-下面是一个打包后JS代码大小的对比图：
+下面是一个打包后 JS 代码大小的对比图：
 
 {{< echarts >}}
 {
@@ -70,7 +70,7 @@ autoCollapseToc: true
 
 这里要注意的是，两个应用都包括了路由，且初始加载大小并没有计算懒加载的“关于”页面。我的第一印象有两点：
 
-- Vue 还是相当轻量级的。 This has always been the case, but a one-to-one comparison makes it much more straightforward.
+- Vue 还是相当轻量级的。 这点在日常工作开发中其实已有体会，并且 Vue 3 相比 Vue 2 提供了更加 treeshakable 的设计肯定是更为精简。不过像这样两个几乎一样的项目放在一起，两相比较，还是更为直观。
 - After compression, the difference in downloading time may be less outstanding. Though I still wish one day Angular will hit the 200kB mark, and after that the 100kB one, for this starter project. :smile:
 
 You may ask: But the browser needs to parse and execute those JavaScript, right? Or do they? :thinking:
